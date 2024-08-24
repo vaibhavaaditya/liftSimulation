@@ -1,0 +1,64 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+:root{
+    --bg_body_color: #fff8e5;
+    --text_color: #000000;
+    --btn_color: #000000;
+    --nav_bar_color: #fcf3a0;
+    --nav_bar_color: #fff8e5;
+    --btn_brdr_color: #ffde25;
+}
+
+body{
+    background-color: var(--bg_body_color);
+    padding: 15px;
+    font-family: 'Manrope','Bakbak One','Times New Roman', Helvetica, sans-serif;
+    display: flex;
+    font-size: 18px;
+    flex-direction: column;
+}
+
+input{
+    font-family: 'Manrope','Bakbak One','Times New Roman', Helvetica, sans-serif;
+    padding: 6px;
+    height: 18px;
+    text-align: center;
+}
+
+button{
+    padding: 6px 10px 6px 10px;
+    border: 3px solid;
+    width: fit-content;
+    font-size: 18px;
+    font-family: 'Manrope','Bakbak One','Times New Roman', Helvetica, sans-serif;
+    background-color: var(--btn_color);
+    color: white;
+}
+
+button:hover{
+    border: 3px solid var(--btn_brdr_color);
+}
+
+.title{
+    align-self: center;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+#form_container{
+    display: flex;
+    align-self: center;
+    padding-top: 20px;
+}
+
+form{
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
