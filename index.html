@@ -14,21 +14,19 @@
 <body>
     <div class="title"> THE LIFT SIMULATOR </div>
     <div id="form_container">
-        <form action="#" method="post">
-            <div>
-                <label for="num_lifts">Number of Lifts:</label>
-                <input type="number" id="num_lifts" name="number1" min="0" placeholder="0" required>
-            </div>
-            <div>
-                <label for="num_floors">Number of Floors:</label>
-                <input type="number" id="num_floors" name="num_floors" min="0" placeholder="0" required>
-            </div>
-            
-            <button type="submit">Submit</button>
-        </form>
+        <div>
+            <label for="num_lifts">Number of Lifts:</label>
+            <input type="number" id="num_lifts" name="number1" min="0" value="2">
+        </div>
+
+        <div>
+            <label for="num_floors">Number of Floors:</label>
+            <input type="number" id="num_floors" name="num_floors" min="0" value="4">
+        </div>
+
+        <button id="submit_lift">Submit</button>
     </div>
-    <div id="building_lift">
-        
-    </div>
+    <div id="building"></div>
+    <script src="./script.js"></script>
 </body>
 </html>

@@ -8,7 +8,8 @@
     --text_color: #000000;
     --btn_color: #000000;
     --nav_bar_color: #fcf3a0;
-    --nav_bar_color: #fff8e5;
+    --nav_bar_color: #fbe9b8;
+    --btn_brdr_color: #fbe9b8;
     --btn_brdr_color: #ffde25;
 }
 
@@ -52,13 +53,8 @@ button:hover{
 #form_container{
     display: flex;
     align-self: center;
-    padding-top: 20px;
-}
-
-form{
-    display: flex;
-    gap: 30px;
-    flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
+    gap: 30px;
+    padding-top: 20px;
+    margin-bottom: 20px;
 }
