@@ -89,15 +89,28 @@ function generate_grid(num_floors, num_lifts){
         lift_box.style.display = 'flex';
         lift_box.style.border = '1px solid black';
         
+        lift_box_left_door.textContent = `${j+1}`;
         lift_box_left_door.style.width = '30px';
+        lift_box_left_door.style.color = 'white';
         lift_box_left_door.style.height = '130px';
         lift_box_left_door.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
         lift_box_left_door.style.border = '10px solid #d1d1d1';
+        lift_box_left_door.style.borderImage = 'linear-gradient(to right, grey, darkgrey) 1';
+        lift_box_right_door.style.borderImage = 'radial-gradient(circle, grey, darkgrey) 1';
+        lift_box_left_door.style.display = 'flex';
+        lift_box_left_door.style.justifyContent = 'center';
+        lift_box_left_door.style.alignItems = 'center';
 
+        lift_box_right_door.textContent = `${j+1}`;
+        lift_box_right_door.style.color = 'white';
         lift_box_right_door.style.width = '30px';
         lift_box_right_door.style.height = '130px';
         lift_box_right_door.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
         lift_box_right_door.style.border = '10px solid #d1d1d1';
+        lift_box_right_door.style.borderImage = 'radial-gradient(circle, grey, darkgrey) 1';
+        lift_box_right_door.style.display = 'flex';
+        lift_box_right_door.style.justifyContent = 'center';
+        lift_box_right_door.style.alignItems = 'center';
 
         lift_box.appendChild(lift_box_left_door);
         lift_box.appendChild(lift_box_right_door);
@@ -111,7 +124,6 @@ function generate_grid(num_floors, num_lifts){
 document.getElementById('building').addEventListener('click', function (event) {
     if (event.target && event.target.classList.contains('floor_btn')) {
         const buttonId = event.target.id;
-        console.log(buttonId);
 
         const btn_press_info = buttonId.split('_');
         const targetFloor = parseInt(btn_press_info[3], 10);
@@ -154,7 +166,7 @@ function openDoors() {
 function closeDoors() {
     const lift_door_ref = document.getElementById('lift_box_1');
     const doors = lift_door_ref.children; 
-    const leftDoor = doors[0]; 
+    const leftDoor = doors[0];
     const rightDoor = doors[1]; 
 
     leftDoor.style.transition = 'transform 2.5s ease-in-out';
@@ -162,5 +174,4 @@ function closeDoors() {
      
     leftDoor.style.transform = `translateX(0%)`;
     rightDoor.style.transform = `translateX(0%)`;
-
 }
