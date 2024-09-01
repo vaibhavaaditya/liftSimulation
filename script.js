@@ -4,6 +4,8 @@ submit_btn_lft.addEventListener('click', () =>{
     let num_floors = parseInt(document.getElementById('num_floors').value, 10);
     let num_lifts = parseInt(document.getElementById('num_lifts').value, 10);
     generate_grid(num_floors, num_lifts);
+    window.scrollTo(0, document.body.scrollHeight);
+    
 });
 
 
@@ -142,6 +144,7 @@ function moveElevatorToFloor(targetFloor) {
     lift_ref.style.transition = `transform ${timeToMove}s ease-in-out`;
     lift_ref.style.transform = `translateY(-${targetPosition}px)`;
     setTimeout(openDoors, timeToMove * 1000);
+    window.scrollTo(0, lift_ref.divPosition - windowHeight / 2);
 }
 
 function openDoors() {
