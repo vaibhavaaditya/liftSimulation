@@ -64,12 +64,12 @@ class Lift {
         leftDoor.style.transform = 'translateX(0%)';
         rightDoor.style.transform = 'translateX(0%)';
         this.isOpen = false;
-        this.building.liftArrivedAtFloor(this.currentFloor);
 
         setTimeout(() => {
             this.isMoving = false;
             this.isBusy = false;
             this.processNextRequest();
+            this.building.liftArrivedAtFloor(this.currentFloor);
         }, 2500);
     }
 
