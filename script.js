@@ -235,13 +235,20 @@ class Building {
 }
 
 document.getElementById('submit_lift').addEventListener('click', () => {
+    const num_floors_value = document.getElementById('num_floors').value ;
+    const num_lifts_value = document.getElementById('num_lifts').value ;
     const num_floors = parseInt(document.getElementById('num_floors').value, 10);
     const num_lifts = parseInt(document.getElementById('num_lifts').value, 10);
     const building_parent = document.getElementById('building_parent');
     const error_invalid_input = document.getElementById("form_input_cmts");
+    
+    console.log(num_floors);
+    console.log(num_lifts);
+    console.log(typeof(num_floors));
 
-    if (num_floors <= 0 || num_lifts < 0) {
-        error_invalid_input.textContent = ' 😂😂 that is funny, now fix the input pls';
+    if (num_floors <= 0 || num_lifts < 0 || isNaN(num_floors) || isNaN(num_lifts) || !(!isNaN(num_floors_value) && Number.isInteger(Number(num_floors_value))) || !(!isNaN(num_lifts_value) && Number.isInteger(Number(num_lifts_value)))) {
+        error_invalid_input.innerHTML = '⚠️⚠️fix the input pls⚠️⚠️ <br> (enter integer value: number of floors >=1; num_lifts >=0)';
+        error_invalid_input.style.textAlign = 'center';
         error_invalid_input.classList.add('input_error');
         building_parent.hidden = true;
     } else {
